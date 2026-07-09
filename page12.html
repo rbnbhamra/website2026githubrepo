@@ -19,9 +19,64 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=A0uLQG"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=A0uLQG" type="text/css">
 
-  
-  
-  
+  <style>
+    /* ===== Exinity case-study page refinements (same as SSP) ===== */
+
+    /* 1. Top-align image + text so the heading lines up with the top of the image. */
+    .image2 .row { align-items: flex-start !important; }
+    @media (min-width: 992px) {
+      .image2 .text-wrapper { padding-top: 0 !important; }
+    }
+
+    /* 2. More readable, professional body copy: shorter measure, more line spacing. */
+    .image2 .mbr-text,
+    .image3 .mbr-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #2b2b2b;
+      max-width: 62ch;
+    }
+    .image2 .mbr-section-title {
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: #1c1c1c;
+    }
+
+    /* 3. Hide the invisible white placeholder columns entirely (all sizes) so
+          text-only sections can use the full page width instead of leaving the
+          right half empty. */
+    .cid-voJ8ThVVg9 .col-lg-5,
+    .cid-voJ7QQK6Mx .col-lg-4,
+    .cid-voO2w8gJaV .col-lg-4,
+    .cid-voO3uMjZZe .col-lg-4,
+    .cid-voO6FzusTg .col-lg-4,
+    .cid-voO74H9dEu .col-lg-4 {
+      display: none !important;
+    }
+
+    /* 4. On desktop, flow that now full-width body copy into two balanced
+          columns so the right side is used and there's no dead space. */
+    @media (min-width: 992px) {
+      .cid-voJ8ThVVg9 .mbr-text,
+      .cid-voJ7QQK6Mx .mbr-text,
+      .cid-voO3uMjZZe .mbr-text,
+      .cid-voO6FzusTg .mbr-text,
+      .cid-voO74H9dEu .mbr-text {
+        max-width: none;
+        column-count: 2;
+        column-gap: 3.5rem;
+        orphans: 3;
+        widows: 3;
+      }
+    }
+
+    /* 5. Mobile: stack title + text first, then the image. */
+    @media (max-width: 991px) {
+      .image2 .row {
+        flex-direction: column-reverse !important;
+      }
+    }
+  </style>
 </head>
 <body>
   
@@ -365,7 +420,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Revisiting Design Brief</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Following the stakeholder discussions and brainstorming sessions, we revisited the design brief to refine our direction. Based on the research findings and identified gaps, we defined a set of focused problem statements. All problem areas were aligned under one overarching question:<br>How might we empower partners to maximise the potential of their business? <br>Key Problem Areas Identified :<br><br><strong>1. Lack of Performance Visibility  </strong><br><br>Partners do not have access to a clear overview of key performance metrics. Critical information such as rebates earned, number of clients, net deposits, and overall performance requires navigating through multiple individual reports.<br>Additionally, there is limited transparency regarding their current tier, earning level, and how these evolve over time. This lack of upfront visibility makes it difficult for partners to track progress and plan strategically.<br><br><strong><br>2. Insufficient Marketing Insights</strong><br><br>Partners have minimal insight into the effectiveness of their digital marketing efforts. There is little visibility into which channels or campaigns drive acquisition or customer value.<br>As a result, they struggle to optimise their strategies, as they lack clarity on what is working and what is not.<br><br><br><strong>3. Lack of Motivation and Actionable Guidance</strong><br><br>The current product experience does not actively motivate partners to improve performance.<br>Information is presented in complex graphs without clear actionable insights, nudges, or incentives. Partners are also unable to easily connect prospective earnings with measurable actions, such as the number of leads generated.<br><br><br><strong>4. Delayed Rebate Processing  </strong><br><br>Due to manual weekly checks performed by the operations team, partners must wait up to a week for rebate approvals. Only after processing are the rebates updated in the system and made available for withdrawal.<br>This delay reduces transparency and impacts the overall partner experience.</p>
+                    <p class="mbr-text mbr-fonts-style display-7">Following the stakeholder discussions and brainstorming sessions, we revisited the design brief to refine our direction. Based on the research findings and identified gaps, we defined a set of focused problem statements. All problem areas were aligned under one overarching question:<br>How might we empower partners to maximise the potential of their business? <br>Key Problem Areas Identified :<br><br><strong>1. Lack of Performance Visibility  </strong><br>Partners do not have access to a clear overview of key performance metrics. Critical information such as rebates earned, number of clients, net deposits, and overall performance requires navigating through multiple individual reports.<br>Additionally, there is limited transparency regarding their current tier, earning level, and how these evolve over time. This lack of upfront visibility makes it difficult for partners to track progress and plan strategically.<br><br><strong><br>2. Insufficient Marketing Insights</strong><br>Partners have minimal insight into the effectiveness of their digital marketing efforts. There is little visibility into which channels or campaigns drive acquisition or customer value.<br>As a result, they struggle to optimise their strategies, as they lack clarity on what is working and what is not.<br><br><br><strong>3. Lack of Motivation and Actionable Guidance</strong><br>The current product experience does not actively motivate partners to improve performance.<br>Information is presented in complex graphs without clear actionable insights, nudges, or incentives. Partners are also unable to easily connect prospective earnings with measurable actions, such as the number of leads generated.<br><br><br><strong>4. Delayed Rebate Processing  </strong><br>Due to manual weekly checks performed by the operations team, partners must wait up to a week for rebate approvals. Only after processing are the rebates updated in the system and made available for withdrawal.<br>This delay reduces transparency and impacts the overall partner experience.</p>
                 </div>
             </div>
         </div>
@@ -473,7 +528,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Design System and User Interface</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7"><strong>Design System Foundation</strong><br><br>- A design system library was established using Material Design 2 as the foundation, primarily due to its compatibility with Flutter, which was a key development requirement.<br><br>- Components were customised to align with the client’s brand guidelines, including colors, typography, and visual styling, as defined by their internal marketing team.<br><br>- Additional required components that were not part of the base system were identified and designed in accordance with the same design principles and guidelines.<br><br>- A Storybook environment was created to document component usage, behaviour, states, and accessibility criteria to ensure consistency and scalability.<br><br><br><strong>My Role in the Design System</strong><br><br>- Collaborated closely with the visual designer to review the component library and identify gaps based on the functional requirements of the partner portal platform.<br><br>- Contributed to defining standards for navigation, layout structure, and interaction patterns to ensure consistency across products and touchpoints.</p>
+                    <p class="mbr-text mbr-fonts-style display-7"><strong>Design System Foundation</strong><br>- A design system library was established using Material Design 2 as the foundation, primarily due to its compatibility with Flutter, which was a key development requirement.<br><br>- Components were customised to align with the client’s brand guidelines, including colors, typography, and visual styling, as defined by their internal marketing team.<br><br>- Additional required components that were not part of the base system were identified and designed in accordance with the same design principles and guidelines.<br><br>- A Storybook environment was created to document component usage, behaviour, states, and accessibility criteria to ensure consistency and scalability.<br><br><br><strong>My Role in the Design System</strong><br>- Collaborated closely with the visual designer to review the component library and identify gaps based on the functional requirements of the partner portal platform.<br><br>- Contributed to defining standards for navigation, layout structure, and interaction patterns to ensure consistency across products and touchpoints.</p>
                 </div>
             </div>
         </div>
@@ -558,7 +613,7 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/4488499" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-builder.html">Free AI Website Software</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>

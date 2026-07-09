@@ -19,9 +19,76 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=XyNmZl"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=XyNmZl" type="text/css">
 
-  
-  
-  
+  <style>
+    /* ===== SSP case-study page refinements ===== */
+
+    /* 1. Top-align image + text so the heading lines up with the top of the image,
+          instead of the image floating centered against shorter/longer copy. */
+    .image2 .row { align-items: flex-start !important; }
+    @media (min-width: 992px) {
+      .image2 .text-wrapper { padding-top: 0 !important; }
+    }
+
+    /* 2. More readable, professional body copy: shorter measure, more line spacing,
+          slightly larger text and a softer near-black. */
+    .image2 .mbr-text,
+    .image3 .mbr-text {
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: #2b2b2b;
+      max-width: 62ch;
+    }
+    .image2 .mbr-section-title {
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+      color: #1c1c1c;
+    }
+
+    /* Group each small heading with its text: keeps them together across the
+       two-column break and uses tight spacing instead of double line breaks. */
+    .image2 .mbr-text .tblock {
+      display: block;
+      break-inside: avoid;
+      margin-bottom: 1.1rem;
+      line-height: 1.75;
+    }
+    .image2 .mbr-text .tblock:last-child { margin-bottom: 0; }
+    .image2 .mbr-text .thead {
+      display: block;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    /* 3. Hide the invisible white placeholder columns entirely (all sizes) so
+          text-only sections can use the full page width instead of leaving the
+          right half empty. */
+    .cid-voIdd1pdXh .col-lg-4,
+    .cid-voIrtVv2Ac .col-lg-4,
+    .cid-voIqNgoXVg .col-lg-4 {
+      display: none !important;
+    }
+
+    /* 4. On desktop, flow that now full-width body copy into two balanced
+          columns so the right side is used and there's no dead space. */
+    @media (min-width: 992px) {
+      .cid-voIdd1pdXh .mbr-text,
+      .cid-voIrtVv2Ac .mbr-text,
+      .cid-voIqNgoXVg .mbr-text {
+        max-width: none;
+        column-count: 2;
+        column-gap: 3.5rem;
+        orphans: 3;
+        widows: 3;
+      }
+    }
+
+    /* 5. Mobile: stack title + text first, then the image. */
+    @media (max-width: 991px) {
+      .image2 .row {
+        flex-direction: column-reverse !important;
+      }
+    }
+  </style>
 </head>
 <body>
   
@@ -119,7 +186,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Research Planning</strong></h2>
-                    <p class="mbr-text mbr-fonts-style display-7"><strong>Research Objective</strong><br><strong><br></strong>To understand how users find, track, and manage previously submitted requests within the Self-Service Portal, from the moment a request is sent through its resolution.<br><br><br><strong>Research Questions</strong><strong><br></strong><br>1. Post-Submission Journey<br>- What does the user journey look like after a request is submitted?<br>- What triggers users to revisit My Requests (e.g. concerns, updates, timelines, external influences)?<br>- How do users’ motivations and expectations change over time?<br>- What touchpoints exist beyond the portal, and how do they influence the experience?<br>- When do users consider their request journey successful?<br><br>2. Finding &amp; Managing Requests<br>- How do users search for and identify a specific request in My Requests?<br>- What mental models do users rely on (status, date, category, urgency)?<br>- Which filters or sorting options are used, expected, or missing?<br>- What information helps users quickly confirm they’ve found the correct request?<br><br>3. Interacting with a Specific Request<br>- What actions do users expect to take on an individual request or incident page?<br>- Which information do users focus on first, and why?<br>- What needs, uncertainties, or challenges arise at this stage?<br></p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock"><strong class="thead">Research Objective</strong>To understand how users find, track, and manage previously submitted requests within the Self-Service Portal, from the moment a request is sent through its resolution.</span><span class="tblock"><strong class="thead">Research Questions</strong>1. Post-Submission Journey<br>- What does the user journey look like after a request is submitted?<br>- What triggers users to revisit My Requests (e.g. concerns, updates, timelines, external influences)?<br>- How do users’ motivations and expectations change over time?<br>- What touchpoints exist beyond the portal, and how do they influence the experience?<br>- When do users consider their request journey successful?<br><br>2. Finding &amp; Managing Requests<br>- How do users search for and identify a specific request in My Requests?<br>- What mental models do users rely on (status, date, category, urgency)?<br>- Which filters or sorting options are used, expected, or missing?<br>- What information helps users quickly confirm they’ve found the correct request?<br><br>3. Interacting with a Specific Request<br>- What actions do users expect to take on an individual request or incident page?<br>- Which information do users focus on first, and why?<br>- What needs, uncertainties, or challenges arise at this stage?</span></p>
                 </div>
             </div>
         </div>
@@ -143,7 +210,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     
-                    <p class="mbr-text mbr-fonts-style display-7"><strong>Methodology</strong><strong><br></strong><strong><br></strong>The research consisted of 1:1 moderated sessions combining qualitative interviews and usability exploration.<br>Each session included:<br>- Interview component to understand the broader post-submission journey, motivations, and expectations<br>- Usability component focused on how users interact with My Requests and individual requests in their own environment, with screen sharing where possible<br><br><br><strong>Anticipated Deliverables</strong><strong><br></strong><strong><br></strong>The research was expected to result in:<br>- A journey map highlighting key touch-points, needs, and friction points from request submission through resolution<br>- A research synthesis report summarizing key insights and translating them into actionable design recommendations<br><br><br><strong>Participants</strong><strong><br></strong><strong><br></strong>The study included 6 participants (1 internal user and 5 customers), all active users of the Self-Service Portal. Participants were selected across different business units and regions to capture a range of usage patterns and configurations.<br></p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock"><strong class="thead">Methodology</strong>The research consisted of 1:1 moderated sessions combining qualitative interviews and usability exploration.<br>Each session included:<br>- Interview component to understand the broader post-submission journey, motivations, and expectations<br>- Usability component focused on how users interact with My Requests and individual requests in their own environment, with screen sharing where possible</span><span class="tblock"><strong class="thead">Anticipated Deliverables</strong>The research was expected to result in:<br>- A journey map highlighting key touch-points, needs, and friction points from request submission through resolution<br>- A research synthesis report summarizing key insights and translating them into actionable design recommendations</span><span class="tblock"><strong class="thead">Participants</strong>The study included 6 participants (1 internal user and 5 customers), all active users of the Self-Service Portal. Participants were selected across different business units and regions to capture a range of usage patterns and configurations.</span></p>
                 </div>
             </div>
         </div>
@@ -167,7 +234,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>User Research &amp; Synthesis</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Following the research sessions, I synthesized the insights into a journey map capturing the end-to-end experience of managing a request from the moment it is submitted to the final consultation by the user. The journey map helped surface key touch-points, user motivations, and shifts in expectations over time, while clearly highlighting moments of friction and uncertainty. This visual artifact made it easier to identify patterns across participants and understand how user needs evolved beyond the initial submission of a request.<br><br>In parallel, I documented the findings in a research report using Condens, summarizing key insights, pain points, and opportunity areas. Each finding was translated into actionable recommendations to ensure the research directly informed design exploration.<br><br>Together, these synthesis outputs provided a clear foundation for design decisions and guided the exploration of solutions for both the My Requests overview and the Incident Card.</p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock">Following the research sessions, I synthesized the insights into a journey map capturing the end-to-end experience of managing a request from the moment it is submitted to the final consultation by the user. The journey map helped surface key touch-points, user motivations, and shifts in expectations over time, while clearly highlighting moments of friction and uncertainty. This visual artifact made it easier to identify patterns across participants and understand how user needs evolved beyond the initial submission of a request.</span><span class="tblock">In parallel, I documented the findings in a research report using Condens, summarizing key insights, pain points, and opportunity areas. Each finding was translated into actionable recommendations to ensure the research directly informed design exploration.</span><span class="tblock">Together, these synthesis outputs provided a clear foundation for design decisions and guided the exploration of solutions for both the My Requests overview and the Incident Card.</span></p>
                 </div>
             </div>
         </div>
@@ -209,7 +276,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Competitor Analysis</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">To ground the design exploration in established industry practices, I reviewed how other IT service management platforms present incident and request information. This analysis focused on identifying common UI patterns rather than comparing feature parity. I examined incident card and request detail screens from HaloITSM, Freshdesk, and ServiceNow, looking specifically at how these products communicate status, priority, ownership, and next steps to users. <br><br>The goal of this exercise was to understand which patterns users are likely already familiar with and to identify conventions that could be adapted to the Self-Service Portal, while still accounting for the platform’s configurability and constraints. Insights from this review helped inform information hierarchy decisions and supported design choices during early exploration.</p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock">To ground the design exploration in established industry practices, I reviewed how other IT service management platforms present incident and request information. This analysis focused on identifying common UI patterns rather than comparing feature parity. I examined incident card and request detail screens from HaloITSM, Freshdesk, and ServiceNow, looking specifically at how these products communicate status, priority, ownership, and next steps to users.</span><span class="tblock">The goal of this exercise was to understand which patterns users are likely already familiar with and to identify conventions that could be adapted to the Self-Service Portal, while still accounting for the platform’s configurability and constraints. Insights from this review helped inform information hierarchy decisions and supported design choices during early exploration.</span></p>
                 </div>
             </div>
         </div>
@@ -366,7 +433,7 @@
             </div>
         </div>
     </div>
-</section><section class="display-7" style="padding: 0;align-items: center;justify-content: center;flex-wrap: wrap;    align-content: center;display: flex;position: relative;height: 4rem;"><a href="https://mobiri.se/4488499" style="flex: 1 1;height: 4rem;position: absolute;width: 100%;z-index: 1;"><img alt="" style="height: 4rem;" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="></a><p style="margin: 0;text-align: center;" class="display-7">&#8204;</p><a style="z-index:1" href="https://mobirise.com/builder/ai-website-creator.html">AI Website Creator</a></section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
  <div id="scrollToTop" class="scrollToTop mbr-arrow-up"><a style="text-align: center;"><i class="mbr-arrow-up-icon mbr-arrow-up-icon-cm cm-icon cm-icon-smallarrow-up"></i></a></div>
