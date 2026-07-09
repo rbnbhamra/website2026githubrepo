@@ -22,6 +22,16 @@
   
   
   
+  <style>
+    /* Continuous artboard: remove the gaps between the stacked image pieces
+       (esp. on mobile) so they line up seamlessly like the original artboard. */
+    .image3 img { display: block; width: 100%; }
+    .image3 .image-wrapper { margin: 0 !important; line-height: 0; }
+    @media (max-width: 991px) {
+      .image3 { padding-bottom: 0 !important; }
+      .image3 ~ .image3 { padding-top: 0 !important; }
+    }
+  </style>
 </head>
 <body>
   
