@@ -15,8 +15,6 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
-  <link rel="preload" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=XyNmZl"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=XyNmZl" type="text/css">
 
   <style>
@@ -43,6 +41,24 @@
       letter-spacing: -0.01em;
       color: #1c1c1c;
     }
+
+    /* Project Overview: title + body on one line (title left, body flows after) */
+    .image2.cid-voI2S0cCSx .mbr-text .tblock { display: block; margin-bottom: 0.9rem; }
+    .image2.cid-voI2S0cCSx .mbr-text .thead {
+      display: inline;
+      font-weight: 700;
+      margin: 0;
+    }
+    .image2.cid-voI2S0cCSx .mbr-text .thead::after { content: ": "; }
+
+    /* Tighter spacing around the full-width image sections */
+    #image1-insights, #image1-crazy8, #image1-designs {
+      padding-top: 1.5rem !important;
+      padding-bottom: 1.5rem !important;
+    }
+    #image1-insights .image-wrapper img,
+    #image1-crazy8 .image-wrapper img,
+    #image1-designs .image-wrapper img { display: block; }
 
     /* Group each small heading with its text: keeps them together across the
        two-column break and uses tight spacing instead of double line breaks. */
@@ -138,7 +154,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Project Overview</strong><strong><br></strong></h2>
-                    <p class="mbr-text mbr-fonts-style display-7">As part of a broader product rewrite initiative, this project focused on redesigning the My Requests overview and the Incident Card within an enterprise self-service portal that is the end-user facing part of a service management tool.<br><br>I led the UX design for this initiative, working closely with a product manager, engineers, and external consultants. My scope included understanding system constraints, planning and conducting user research, exploring design solutions, and supporting technical reviews and design handover.<br><br>Timeline: 6 weeks Platform: Web-based self-service portal Users: Internal employees managing service requests and incidents<br><br>The redesign aimed to improve clarity, scannability, and consistency across different system configurations, helping users better understand request status and next steps.</p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock">As part of a broader product rewrite initiative, this project focused on redesigning the My Requests overview and the Incident Card within an enterprise self-service portal that is the end-user facing part of a service management tool.</span><span class="tblock"><strong class="thead">My Role</strong>I led the UX design for this initiative, working closely with a product manager, engineers, and external consultants. My scope included understanding system constraints, planning and conducting user research, exploring design solutions, and supporting technical reviews and design handover.</span><span class="tblock"><strong class="thead">Timeline</strong>6 weeks</span><span class="tblock"><strong class="thead">Platform</strong>Web-based self-service portal</span><span class="tblock"><strong class="thead">Users</strong>Internal employees managing service requests and incidents</span><span class="tblock"><strong class="thead">Objective</strong>The redesign aimed to improve clarity, scannability, and consistency across different system configurations, helping users better understand request status and next steps.</span></p>
                 </div>
             </div>
         </div>
@@ -162,7 +178,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Context &amp; Constraints </strong><br><strong>(Understanding the System)</strong></h2>
-                    <p class="mbr-text mbr-fonts-style display-7">Before initiating user research or design exploration, I focused on building a clear understanding of the Self-Service Portal’s underlying system and configuration constraints.<br><br>I scheduled a working session with an internal consultant from our organization who supports customer implementations and configures the Self-Service Portal for different clients. During this walkthrough, I gained an end-to-end view of the request and incident flows and a detailed understanding of the operator-side settings that directly influence what information can be surfaced in the UI.<br><br>Mapping these settings was a critical first step. It helped clarify what was technically possible, which configurations were commonly used by customers, and where flexibility or limitations existed. This system understanding informed early design decisions and directly shaped how I framed questions for the upcoming user research, ensuring that insights gathered would be grounded in real product capabilities rather than theoretical solutions.</p>
+                    <p class="mbr-text mbr-fonts-style display-7">Before any research or design exploration, I mapped the Self-Service Portal’s underlying system and configuration constraints with an internal consultant who configures the portal for customers.<br><br>This walkthrough gave me an end-to-end view of the request and incident flows and clarified which operator-side settings shape what the UI can show, what was technically possible, which configurations customers commonly use, and where the flexibility and limits were. It grounded both my early design decisions and the framing of the research questions in real product capabilities.</p>
                 </div>
             </div>
         </div>
@@ -186,7 +202,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h2 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Research Planning</strong></h2>
-                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock"><strong class="thead">Research Objective</strong>To understand how users find, track, and manage previously submitted requests within the Self-Service Portal, from the moment a request is sent through its resolution.</span><span class="tblock"><strong class="thead">Research Questions</strong>1. Post-Submission Journey<br>- What does the user journey look like after a request is submitted?<br>- What triggers users to revisit My Requests (e.g. concerns, updates, timelines, external influences)?<br>- How do users’ motivations and expectations change over time?<br>- What touchpoints exist beyond the portal, and how do they influence the experience?<br>- When do users consider their request journey successful?<br><br>2. Finding &amp; Managing Requests<br>- How do users search for and identify a specific request in My Requests?<br>- What mental models do users rely on (status, date, category, urgency)?<br>- Which filters or sorting options are used, expected, or missing?<br>- What information helps users quickly confirm they’ve found the correct request?<br><br>3. Interacting with a Specific Request<br>- What actions do users expect to take on an individual request or incident page?<br>- Which information do users focus on first, and why?<br>- What needs, uncertainties, or challenges arise at this stage?</span></p>
+                    <p class="mbr-text mbr-fonts-style display-7"><span class="tblock"><strong class="thead">Research Objective</strong>To understand how users find, track, and manage previously submitted requests within the Self-Service Portal, from the moment a request is sent through its resolution.</span><span class="tblock"><strong class="thead">Research Questions</strong>1. Post-Submission Journey<br>- What happens after a request is submitted, and what triggers users to revisit My Requests?<br>- How do motivations and expectations change over time, and when do users consider the journey successful?<br><br>2. Finding &amp; Managing Requests<br>- How do users search for and identify a specific request, and what mental models do they rely on?<br>- Which filters and sorting options are used, expected, or missing?<br><br>3. Interacting with a Specific Request<br>- What actions do users expect to take, and which information do they focus on first?<br>- What needs or uncertainties arise at this stage?</span></p>
                 </div>
             </div>
         </div>
@@ -301,24 +317,31 @@
     </div>
 </section>
 
-<section data-bs-version="5.1" class="image2 cid-voI74SDGJN" id="image2-2z">
-    
-
-    
-    
-
+<section data-bs-version="5.1" class="image1 cid-voI74SDGJN" id="image1-insights">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-lg-5">
-                <div class="image-wrapper">
-                    <img src="assets/images/group206196-1256x1751.jpg" alt="Mobirise Website Builder">
-                    
-                </div>
-            </div>
-            <div class="col-12 col-lg">
+        <div class="row justify-content-center">
+            <div class="col-12">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Design Explorations</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Design exploration focused on translating research insights into clear, scalable solutions that could work across different system configurations. I explored multiple layout options to better express complex request information and experimented with different approaches to visual hierarchy to draw attention to the most important details, such as status, progress, and required user actions.<br><br>All concepts were built using existing design system components and guidelines to ensure consistency and feasibility within the product rewrite. I iterated on variations that addressed key user pain points identified in research, including difficulty scanning multiple requests, uncertainty about what to do next, and challenges identifying a specific request at a glance.<br><br>This was done through crazy 8 exercise with other designers, to come up with innovative solutions to address some tricky problems. As an example below you can see some sketches from this exercise on how improve the closing request feature on a card.<br><br>Throughout this phase, design decisions were continuously evaluated against user needs, system constraints, and long-term scalability, helping narrow down solutions that balanced clarity, flexibility, and technical viability.<br></p>
+                    <p class="mbr-text mbr-fonts-style display-7" style="margin-bottom: 1.5rem;">To facilitate ideation, I first laid out all the problems surfaced in user research. Having every pain point visible in one place made it easier to spot connections and kept the explorations anchored to real user needs.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/ssp-research-insights.png" alt="Research insights laid out: how and why users access the incident card, closing friction, and scrolling issues" style="width:100%;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section data-bs-version="5.1" class="image1 cid-voI74SDGJN" id="image1-crazy8">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="text-wrapper">
+                    <p class="mbr-text mbr-fonts-style display-7" style="margin-bottom: 1.5rem;">I then ran crazy 8 exercises with other designers to generate creative solutions for each problem. As an example, here is the crazy 8 round for closing a ticket which was for exploring ways to remove the double effort of adding a closing reason when a comment was already written.</p>
+                </div>
+                <div class="image-wrapper">
+                    <img src="assets/images/ssp-crazy8-closing.png" alt="Crazy 8 exercise for closing a ticket: problem statement and eight sketched variations of the incident card" style="width:100%;">
                 </div>
             </div>
         </div>
@@ -333,16 +356,16 @@
 
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-12 col-lg-6">
+            <div class="col-12 col-lg-7">
                 <div class="image-wrapper">
-                    <img src="assets/images/image2071-1256x543.jpg" alt="Mobirise Website Builder">
+                    <img src="assets/images/ssp-tech-review.png" alt="Figma canvas with tech review explorations" style="width:100%;">
                     
                 </div>
             </div>
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Tech Review</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Early and ongoing technical reviews were conducted in collaboration with developers in the team to validate feasibility across different customer setups. These sessions helped identify which design ideas could be supported by existing configurations and where adjustments were needed to align with technical constraints.<br><br>Feedback from these reviews informed refinements to information hierarchy, component usage, and interaction patterns, ensuring that the proposed designs could be reliably implemented without introducing additional complexity or custom behavior.</p>
+                    <p class="mbr-text mbr-fonts-style display-7">The strongest ideas from the crazy 8 rounds were taken from wireframes to full UI, applying the design system guidelines, and brought to the team for review and further iterations.<br><br>Alongside this, early and ongoing technical reviews with developers validated feasibility across different customer setups identifying which ideas existing configurations could support and where adjustments were needed. Their feedback informed refinements to information hierarchy, component usage, and interaction patterns, so the designs could be implemented without extra complexity or custom behavior.</p>
                 </div>
             </div>
         </div>
@@ -366,7 +389,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>User Validation</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">To validate some of the proposed design directions, I shared refined concepts with users to assess clarity, comprehension, and overall usability through an unmoderated user test. We used Useberry as a tool to conduct the test. <br><br>Tasks that were mainly evaluated :<br><br>Finding the original request description in the new layout<br>Sharing the request with colleagues<br>Closing the request<br><br><strong>Follow up questions</strong><br>1. How was the experience on an opinion scale<br>2. An open ended question explaining the experience<br><br><br><strong>Targeted expected response</strong><br>Atleast 20 participants<br><br><br><strong>Success criteria</strong><br>For each task a success threshold is an average rating of 5 or above<br>Responses will be paired with the open feedback <br><br>Feedback focused on how easily users could understand request status, identify relevant information, and anticipate next steps.<br><br>Insights from these sessions were used to fine-tune layouts, labeling, and emphasis, while confirming that the redesigned My Requests overview and Incident Card better supported users’ mental models compared to the existing experience.</p>
+                    <p class="mbr-text mbr-fonts-style display-7">To validate some of the proposed design directions, I shared refined concepts with users to assess clarity, comprehension, and overall usability through an unmoderated user test. We used Useberry as a tool to conduct the test. Tasks that were mainly evaluated :<br>- Finding the original request description in the new layout<br>- Sharing the request with colleagues<br>- Closing the request<br><br><strong>Follow up questions</strong><br>1. How was the experience on an opinion scale<br>2. An open ended question explaining the experience<br><br><strong>Targeted expected response</strong><br>Atleast 20 participants<br><br><strong>Success criteria</strong><br>For each task a success threshold is an average rating of 5 or above<br>Responses will be paired with the open feedback. Feedback focused on how easily users could understand request status, identify relevant information, and anticipate next steps.<br><br>Insights from these sessions were used to fine-tune layouts, labeling, and emphasis, while confirming that the redesigned My Requests overview and Incident Card better supported users’ mental models compared to the existing experience.</p>
                 </div>
             </div>
         </div>
@@ -390,7 +413,7 @@
             <div class="col-12 col-lg">
                 <div class="text-wrapper">
                     <h3 class="mbr-section-title mbr-fonts-style mb-3 display-5"><strong>Dev Handover</strong></h3>
-                    <p class="mbr-text mbr-fonts-style display-7">Final designs were prepared for handover as part of the product rewrite initiative. <br>This included:<br><br>1. Different screen sizes<br>2. Edge cases/corner cases<br>3. All the error and empty states<br>4. Accessible heading structure for screen readers<br>5. Making sure longer texts, custom field names and translations do not ruin the design<br><br>I worked closely with engineering to walk through the designs, clarify intent, and ensure a shared understanding of edge cases and system-driven behavior, helping support a smooth implementation phase.<br><br>Accessibility considerations were incorporated throughout the design process. I reviewed the designs against accessibility guidelines, with particular attention to color contrast, text hierarchy, focus order, and the use of visual cues beyond color alone.<br><br>Where needed, adjustments were made to ensure that critical information such as status and alerts remained perceivable and understandable for a wide range of users, supporting inclusive use of the Self-Service Portal.<br></p>
+                    <p class="mbr-text mbr-fonts-style display-7">Final designs were prepared for handover as part of the product rewrite initiative. This included:<br>1. Different screen sizes<br>2. Edge cases/corner cases<br>3. All the error and empty states<br>4. Accessible heading structure for screen readers<br>5. Making sure longer texts, custom field names and translations do not ruin the design<br><br>Accessibility considerations were incorporated throughout the design process. I reviewed the designs against accessibility guidelines, with particular attention to color contrast, text hierarchy, focus order, and the use of visual cues beyond color alone. Where needed, adjustments were made to ensure that critical information such as status and alerts remained perceivable and understandable for a wide range of users, supporting inclusive use of the Self-Service Portal.<br></p>
                 </div>
             </div>
         </div>
@@ -412,6 +435,20 @@
     </div>
 </section>
 
+<section data-bs-version="5.1" class="content15 cid-voIUMDwfci" id="content15-outcome">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="card col-md-12 col-lg-12">
+                <div class="card-wrapper">
+                    <div class="card-box align-left">
+                        <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5"><strong>Outcome</strong></h4>
+                        <p class="mbr-text mbr-fonts-style display-7">The redesigned My Requests overview and Incident Card shipped as part of the product rewrite. Following the launch, adoption of the redesigned SSP increased by <b>15%</b> over a period of 3 months<strong>.</strong> Customers actively switched to the new experience, while feedback collected through the in-product channel was overwhelmingly positive where users found it easier to understand the status of their requests and what to do next.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section data-bs-version="5.1" class="content15 cid-voIUMDwfci" id="content15-3r">
 
     
@@ -424,7 +461,7 @@
                 <div class="card-wrapper">
                     <div class="card-box align-left">
                         <h4 class="card-title mbr-fonts-style mbr-white mb-3 display-5"><strong>Reflections and Learnings</strong></h4>
-                        <p class="mbr-text mbr-fonts-style display-7">This project reinforced the importance of grounding design decisions in a strong understanding of system constraints, especially in highly configurable enterprise products. Early collaboration with consultants and engineers proved essential in shaping realistic and scalable solutions, and helped me avoid proposing directions that would not survive contact with real customer configurations.<br><br>I also learned the value of framing research questions around the broader post-submission journey, which helped uncover needs beyond the immediate UI and informed more meaningful design improvements. Talking to users about what happens before and after they visit My Requests surfaced expectations around communication and status changes that a screen-by-screen evaluation would have missed.<br><br>A key experiment in this project was using Claude to build a working coded prototype for user testing. Instead of testing static Figma flows, I prompted my designs into functional HTML prototypes with real interactions, such as filtering, status changes, and expandable request cards. This let participants explore the interface naturally rather than following a fixed click path, which produced more honest behavior and revealed usability issues that scripted prototypes tend to hide. It also made it cheap to adjust the prototype between sessions when an early finding suggested a better variant. Working this way changed how I think about the role of AI tools in the design process: less as a shortcut for visuals, more as a way to raise the fidelity of research signals.<br><br>If revisiting this project, I would further explore longitudinal validation to better understand how users’ needs evolve over the full lifecycle of a request, and invest earlier in testing edge-case configurations with real customer data.</p>
+                        <p class="mbr-text mbr-fonts-style display-7">This project was a practical reminder that designing for an enterprise product means working with its constraints, not around them. Involving consultants and engineers early helped us identify what was technically feasible and avoid solutions that would not scale across different customer configurations. Looking at the full journey after submission also uncovered gaps we would have otherwise missed.<br><br>One useful experiment was building a coded prototype with Claude for user testing. Participants could filter requests, change statuses, and expand cards as they would in the product. This led to more natural interactions and exposed issues that were difficult to observe in a scripted Figma prototype. It was also quick to update between sessions as new feedback emerged.</p>
                         
                     </div>
                 </div>
