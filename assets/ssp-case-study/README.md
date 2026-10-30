@@ -14,6 +14,8 @@ The page mirrors the existing homepage's Libre Franklin headings, Source Sans 3 
 - The Discovery gallery reuses the original research planning, synthesis, and competitor analysis images under `assets/images/`.
 - The always-visible starting-artifacts section reuses two existing images and includes the uploaded Crazy 8 screenshot at `assets/ssp-case-study/crazy8-closing.png`. All screenshot references are local website assets; there are no full-size image interactions.
 
+The artifact section has four stages: framing the friction, exploring closing-flow alternatives, refining the interface hierarchy, and validation. Each stage includes a short explanation and a design takeaway. The Refine stage reuses static versions of the request overview and incident-detail visuals already shown on the page, replacing the older reference screenshots. The Validate stage shows the original Useberry task prompt, click heatmap, and opinion scale in separate CSS viewports of `group206195-1256x1989.jpg`; no screenshot pixels or reported outcomes are changed. These are presented as original test materials, not as measured results of the new prototype. Views stack vertically on mobile.
+
 The current source was prepared from the user's final edited HTML download. Its text, footer, images, static gallery behavior, and homepage-matching back-to-top control are preserved. Styles and scripts were extracted into the page's existing asset files for website deployment. The downloadable single-file version retains embedded images; the repository version uses identical local image bytes.
 
 ### Visual editing mode
