@@ -1,3 +1,4 @@
+
 /* Local concept interactions. No network requests or persistent data storage. */
 (() => {
   'use strict';
@@ -195,4 +196,27 @@
     chapterLinks.forEach(link => observer.observe(document.querySelector(link.hash)));
   }
   updateCounts();
+})();
+
+
+
+(() => {
+  'use strict';
+  const control = document.querySelector('#scrollToTop');
+  const root = document.documentElement;
+  const body = document.body;
+  function update() {
+    const position = root.scrollTop || body.scrollTop || window.scrollY || 0;
+    const height = Math.max(body.scrollHeight, root.scrollHeight, body.offsetHeight, root.offsetHeight, body.clientHeight, root.clientHeight);
+    control.hidden = !(position > height / 2 - root.clientHeight / 2 || position > window.innerHeight);
+  }
+  control.querySelector('button').addEventListener('click', () => {
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({ top: 0, left: 0, behavior: reducedMotion ? 'instant' : 'smooth' });
+  });
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  window.addEventListener('load', update);
+  window.addEventListener('pageshow', update);
+  update();
 })();

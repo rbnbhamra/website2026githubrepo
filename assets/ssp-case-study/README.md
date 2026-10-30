@@ -11,7 +11,10 @@ The page mirrors the existing homepage's Libre Franklin headings, Source Sans 3 
 - Copy and page structure: `ssp.html`.
 - Responsive styling, diagrams, and print rules: `style.css`.
 - Local search, filters, request preview, replies, closure, and chapter navigation: `script.js`.
-- The process archive reuses two existing files under `assets/images/`.
+- The Discovery gallery reuses the original research planning, synthesis, and competitor analysis images under `assets/images/`.
+- The always-visible starting-artifacts section reuses two existing images and includes the uploaded Crazy 8 screenshot at `assets/ssp-case-study/crazy8-closing.png`. All screenshot references are local website assets; there are no full-size image interactions.
+
+The current source was prepared from the user's final edited HTML download. Its text, footer, images, static gallery behavior, and homepage-matching back-to-top control are preserved. Styles and scripts were extracted into the page's existing asset files for website deployment. The downloadable single-file version retains embedded images; the repository version uses identical local image bytes.
 
 ### Visual editing mode
 
@@ -45,3 +48,7 @@ The portal preview supports filtering, searching, viewing request details, addin
 - Real browser layout, keyboard behavior, and assistive technology checks remain required. Chromium was unavailable in the execution environment and its download was blocked; these checks have not been claimed as passed.
 
 Before merging, open `ssp.html` through a local HTTP server and review desktop and mobile widths, keyboard navigation, dialog focus and Escape behavior, the archive images, and print output. Review the self-initiated project framing and proposed evaluation targets with the project owner.
+
+## Applying the replacement
+
+Merge the reviewed branch into the branch used by the website's existing publishing workflow. The case study keeps the same `ssp.html` URL, so the homepage project link continues to work. The pull request itself does not publish changes. Do not re-export this page from the unchanged Mobirise project, which can overwrite the HTML implementation.
