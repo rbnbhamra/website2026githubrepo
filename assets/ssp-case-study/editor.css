@@ -1,0 +1,67 @@
+/* Authoring controls appear only in the editable preview or with ?edit=1. */
+.page-editor {
+  position: fixed; right: 22px; bottom: 22px; z-index: 80;
+  font-family: 'Source Sans 3', Arial, sans-serif; font-size: 14px;
+  color: #232323; max-width: min(690px, calc(100vw - 32px));
+}
+.page-editor button, .page-editor summary { font: inherit; cursor: pointer; }
+.editor-launch {
+  display: flex; gap: 20px; align-items: center; padding: 12px 20px;
+  border: 1px solid #148cca; border-radius: 4px; background: #47b5ed;
+  color: #16394c; font-weight: 600 !important; box-shadow: 0 4px 20px #00000024;
+}
+.editor-launch span { font-size: 20px; line-height: 1; }
+.editor-workspace {
+  background: #ffffff; border: 1px solid #cbdce6; border-top: 3px solid #47b5ed;
+  border-radius: 4px; padding: 17px 20px; box-shadow: 0 8px 35px #0000002b;
+}
+.editor-heading { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.editor-heading strong { font-size: 16px; font-family: 'Libre Franklin', Arial, sans-serif; }
+.editor-done { border: 0; background: none; padding: 3px 0; color: #0d76ad; text-decoration: underline; }
+.editor-instructions { font-size: 13px; line-height: 1.6; margin: 10px 0 14px; max-width: 570px; }
+.editor-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
+.editor-actions>button, .editor-section-menu>summary {
+  border: 1px solid #d3dce1; background: #fafafa; border-radius: 4px;
+  color: #333333; padding: 7px 10px; line-height: 1.5; font-size: 13px;
+}
+.editor-actions>button:hover, .editor-section-menu>summary:hover { border-color: #148cca; background: #f0f8fe; }
+.editor-actions>button:disabled { opacity: .4; cursor: default; }
+.editor-actions .editor-download { background: #47b5ed; border-color: #47b5ed; color: #16394c; font-weight: 600; }
+.editor-section-menu { position: relative; }
+.editor-section-menu>summary { list-style: none; }
+.editor-section-menu>summary::-webkit-details-marker { display: none; }
+.editor-section-menu[open]>summary { border-color: #148cca; background: #f0f8fe; }
+.editor-section-options {
+  position: absolute; bottom: calc(100% + 10px); left: 0; width: 325px;
+  max-height: min(55vh, 460px); overflow: auto; padding: 10px 14px;
+  border: 1px solid #cbdce6; border-radius: 4px; background: #ffffff; box-shadow: 0 8px 30px #00000024;
+}
+.editor-section-options label { display: flex; align-items: start; gap: 10px; padding: 10px 0; font-size: 13px; cursor: pointer; line-height: 1.5; }
+.editor-section-options label+label { border-top: 1px solid #eeeeee; }
+.editor-section-options input { margin: 3px 0 0; flex-shrink: 0; width: 16px; height: 16px; accent-color: #148cca; }
+.editor-status { font-size: 12px; color: #0d76ad; margin: 13px 0 0; line-height: 1.6; }
+.editor-help { font-size: 11px; color: #666666; margin: 7px 0 0; line-height: 1.6; }
+.page-editing { padding-bottom: 270px; }
+.page-editing [contenteditable="true"][data-edit-id] {
+  outline: 1px dashed #47b5ed99; outline-offset: 5px;
+  border-radius: 2px; cursor: text; min-height: 1em;
+}
+.page-editing [contenteditable="true"][data-edit-id]:hover { outline-color: #148cca; background-color: #47b5ed0c; }
+.page-editing [contenteditable="true"][data-edit-id]:focus { outline: 2px solid #148cca; outline-offset: 5px; }
+.page-editing .hero [contenteditable="true"]:focus, .page-editing .constraint-section [contenteditable="true"]:focus, .page-editing .reflection-section [contenteditable="true"]:focus { outline-color: #9fdbf8; }
+@media (max-width: 760px) {
+  .page-editor { right: 12px; bottom: 12px; left: 12px; max-width: none; }
+  .editor-launch { margin-left: auto; }
+  .editor-workspace { padding: 14px; }
+  .editor-instructions { font-size: 12px; margin: 8px 0 11px; }
+  .editor-heading strong { font-size: 14px; }
+  .editor-done { font-size: 12px !important; }
+  .editor-actions { gap: 6px; }
+  .editor-actions>button, .editor-section-menu>summary { font-size: 12px; padding: 7px 9px; }
+  .editor-section-menu { position: static; }
+  .editor-section-options { position: absolute; bottom: calc(100% + 10px); left: 0; right: 0; width: auto; max-height: 40vh; }
+  .editor-status { margin-top: 10px; font-size: 11px; }
+  .editor-help { font-size: 10px; }
+  .page-editing { padding-bottom: 320px; }
+}
+@media print { .page-editor { display: none !important; } .page-editing { padding-bottom: 0; } .page-editing [contenteditable] { outline: none !important; } }

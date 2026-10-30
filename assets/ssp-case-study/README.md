@@ -13,6 +13,19 @@ The page mirrors the existing homepage's Libre Franklin headings, Source Sans 3 
 - Local search, filters, request preview, replies, closure, and chapter navigation: `script.js`.
 - The process archive reuses two existing files under `assets/images/`.
 
+### Visual editing mode
+
+The downloadable preview includes an **Edit page** button. After publication, the repository page exposes the same local tools when opened with `?edit=1`. Normal website visitors see no editor controls.
+
+- Click a heading, paragraph, caption, table cell, or metadata value to edit it. Inline emphasis is retained; pasted content is plain text.
+- Use **Sections** to show or hide narrative sections and the interactive prototype. The hero remains visible. Links to hidden chapters are also hidden.
+- **Undo**, **Redo**, and an undoable **Reset** cover text changes and section visibility. Reset requires a second click to confirm.
+- Drafts are saved to this browser's local storage when available. They do not sync to other browsers or to GitHub. If browser storage is blocked, download an editable copy before closing.
+- **Download page** exports a clean `ssp.html` with styles, prototype behavior, images, and edits included. Editor controls, editor code, and live prototype activity are excluded.
+- **Save editable copy** downloads the same content with editing tools for later work. Downloaded files do not update the live website; upload the clean HTML or have it committed to the repository.
+
+The source page loads page-local `editor.css` and `editor.js`. The authoring script is inactive without the explicit editor flag. Downloads embed local dependencies; the existing Google Fonts import still needs internet access for the exact font faces, with standard fallback fonts available offline. Visual editing covers documentation text and section visibility, not prototype data, image replacement, or layout redesign.
+
 This page is maintained as HTML. Re-exporting `ssp.html` from the original Mobirise project can overwrite these changes, because `project.mobirise` has not been updated.
 
 ## Content provenance
@@ -28,6 +41,7 @@ The portal preview supports filtering, searching, viewing request details, addin
 - JavaScript syntax checked with `node --check`.
 - HTML checked for unique IDs, valid local chapter targets, a single H1, and existing asset paths.
 - Behavior checked against the actual HTML in a minimal DOM harness: mobile navigation toggle, Escape handling, close on navigation, search, filters, empty state, dialog data, safe text rendering, per-request drafts, reply state changes, cancellation, closure, counts, and session history.
+- Editor state-model checks cover text and section changes, undo/redo, branching history, undoable reset, snapshot isolation, history bounds, and validation of recovered drafts. Browser editing, caret behavior, local storage, and download flows still need real browser verification.
 - Real browser layout, keyboard behavior, and assistive technology checks remain required. Chromium was unavailable in the execution environment and its download was blocked; these checks have not been claimed as passed.
 
 Before merging, open `ssp.html` through a local HTTP server and review desktop and mobile widths, keyboard navigation, dialog focus and Escape behavior, the archive images, and print output. Review the self-initiated project framing and proposed evaluation targets with the project owner.
