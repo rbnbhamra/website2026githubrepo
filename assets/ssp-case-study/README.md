@@ -1,6 +1,6 @@
 # SSP case study
 
-`ssp.html` replaces the previous SSP page with a self-initiated concept case study. Its CSS and JavaScript are isolated in this directory; other portfolio pages and the generated global theme are unchanged.
+`ssp.html` replaces the previous SSP page with a self-initiated redesign case study. Its CSS and JavaScript are isolated in this directory; other portfolio pages and the generated global theme are unchanged.
 
 ## Visual alignment with the homepage
 
@@ -17,7 +17,7 @@ This page is maintained as HTML. Re-exporting `ssp.html` from the original Mobir
 
 ## Content provenance
 
-The project owner identified this as a fictional portfolio project. The page therefore explicitly identifies it as a concept. Its research scenarios, six-person study plan, and numerical acceptance targets are illustrative. No completed interviews, usability results, launch, adoption lift, or customer endorsement are claimed. The inline interface illustrations are new concept reconstructions, and the archive identifies existing images as starting artifacts.
+The project owner identified this as a fictional portfolio project. The page identifies it as a self-initiated redesign. Research assumptions, the proposed six-person study, prototype sample data, and proposed acceptance targets remain labeled accurately. No completed interviews, usability results, launch, adoption lift, or customer endorsement are claimed. The inline interface illustrations are new design illustrations, and the archive identifies existing images as starting artifacts.
 
 ## Prototype
 
@@ -30,4 +30,4 @@ The portal preview supports filtering, searching, viewing request details, addin
 - Behavior checked against the actual HTML in a minimal DOM harness: mobile navigation toggle, Escape handling, close on navigation, search, filters, empty state, dialog data, safe text rendering, per-request drafts, reply state changes, cancellation, closure, counts, and session history.
 - Real browser layout, keyboard behavior, and assistive technology checks remain required. Chromium was unavailable in the execution environment and its download was blocked; these checks have not been claimed as passed.
 
-Before merging, open `ssp.html` through a local HTTP server and review desktop and mobile widths, keyboard navigation, dialog focus and Escape behavior, the archive images, and print output. Review the concept framing and proposed evaluation targets with the project owner.
+Before merging, open `ssp.html` through a local HTTP server and review desktop and mobile widths, keyboard navigation, dialog focus and Escape behavior, the archive images, and print output. Review the self-initiated project framing and proposed evaluation targets with the project owner.
