@@ -18,6 +18,8 @@
 
 
 
+
+
 </head>
 <body>
 <a class="skip" href="#main">Skip to case study</a>
@@ -130,13 +132,36 @@
       <div class="artifact-takeaway"><strong>Exploration focus</strong><p>Reduce duplicate typing while preserving a deliberate confirmation.</p></div>
     </article>
     <article class="artifact-step">
-      <div class="artifact-step-heading"><span class="artifact-step-index">03 / REFINE</span><div><h4>Connect the overview and the conversation</h4><p>These interface references show the information and actions the redesign needs to organize across the two connected surfaces.</p></div></div>
-      <div class="artifact-reference-grid">
-        <figure class="artifact-reference"><div class="artifact-reference-label">My Requests overview</div><div class="artifact-screen-frame"><img src="assets/images/ssp-request-overview-incident.jpg" width="1570" height="2465" alt="Request overview reference screen with request descriptions and approval statuses" loading="lazy" decoding="async"></div><figcaption>Request identity, description, and approval status help orient the user.</figcaption></figure>
-        <figure class="artifact-reference"><div class="artifact-reference-label">Incident detail</div><div class="artifact-screen-frame artifact-screen-frame--detail"><img src="assets/images/ssp-request-overview-incident.jpg" width="1570" height="2465" alt="Incident detail reference screen with the conversation, request details, and close and share actions" loading="lazy" decoding="async"></div><figcaption>The conversation sits alongside request details and the actions available to the user.</figcaption></figure>
+  <div class="artifact-step-heading"><span class="artifact-step-index">03 / REFINE</span><div><h4>Connect the overview and the conversation</h4><p>The overview makes status and next steps scannable. The incident detail keeps the conversation central and reference information separate, carrying the same design language across both surfaces.</p></div></div>
+  <div class="artifact-reference-grid artifact-reference-grid--current">
+    <figure class="artifact-reference"><div class="artifact-reference-label">My Requests overview</div><div class="portal artifact-static-portal" aria-label="Request overview design matching the prototype shown above, with request titles, status labels, and next steps" role="img">
+      <div class="portal-header"><span class="portal-brand"><span class="brand-symbol" aria-hidden="true">s</span> Service space</span><span class="portal-user">Your workplace, supported. <span class="avatar">AS</span></span></div>
+      <div class="portal-body">
+        <div class="portal-title"><div><p class="portal-breadcrumb">Home <span aria-hidden="true">/</span> My requests</p><h2>A little less waiting.<br>A lot more knowing.</h2></div><span class="portal-counter"><strong>3</strong> active requests</span></div>
+        <div class="portal-tools"><div class="filter-group" role="group" aria-label="Filter requests"><span class="filter is-selected">All requests <span>4</span></span><span class="filter">Needs you <span>1</span></span><span class="filter">Closed <span>1</span></span></div><span class="search-box"><span aria-hidden="true">⌕</span><span class="artifact-static-search">Find a request</span></span></div>
+        <div class="request-list">
+          <span class="request-row"><span class="request-symbol" aria-hidden="true">↗</span><span class="request-name"><strong>Laptop connection issue</strong><small>INC-2048 · IT support</small></span><span class="request-status"><span class="badge needs">Needs your reply</span><small>Can you confirm your device?</small></span><span class="request-updated">12 min ago</span><span aria-hidden="true">↗</span></span>
+          <span class="request-row"><span class="request-symbol" aria-hidden="true">⊞</span><span class="request-name"><strong>Access to the design library</strong><small>REQ-2041 · Software &amp; access</small></span><span class="request-status"><span class="badge progress">In progress</span><small>Your IT team is working on it</small></span><span class="request-updated">1 hour ago</span><span aria-hidden="true">↗</span></span>
+          <span class="request-row"><span class="request-symbol" aria-hidden="true">⊡</span><span class="request-name"><strong>Replacement office chair</strong><small>REQ-2036 · Workplace</small></span><span class="request-status"><span class="badge waiting">Awaiting approval</span><small>With your workplace team</small></span><span class="request-updated">Yesterday</span><span aria-hidden="true">↗</span></span>
+          <span class="request-row"><span class="request-symbol" aria-hidden="true">✓</span><span class="request-name"><strong>Meeting room display</strong><small>INC-2029 · IT support</small></span><span class="request-status"><span class="badge closed">Closed</span><small>Resolved and confirmed</small></span><span class="request-updated">2 days ago</span><span aria-hidden="true">↗</span></span>
+        </div>
+        <div class="portal-footer"><span>Clear status. Useful context. Your next step.</span><span>Interactive prototype · Sample data</span></div>
       </div>
-      <div class="artifact-takeaway"><strong>Connection across surfaces</strong><p>A consistent title and status should help users move from the list to the conversation without losing context.</p></div>
-    </article>
+    </div>
+    <figcaption>Recognizable titles, clear statuses, and a useful next step for each request.</figcaption></figure>
+    <figure class="artifact-reference"><div class="artifact-reference-label">Incident detail</div><div class="detail-diagram" role="img" aria-label="Incident detail design matching the visual shown above, with a conversation, reply area, and reference details panel"><div class="detail-diagram-title"><span class="badge needs">Needs your reply</span><h4>Laptop connection issue</h4></div><div class="diagram-conversation"><span class="diagram-eyebrow">PRIMARY / THE CONVERSATION</span><div class="message"><span class="mini-avatar">JT</span><div><strong>Jordan · IT support</strong><p>Can you confirm which device you’re using?</p></div></div><div class="illustrated-composer">Write a reply…<span>Send reply ↗</span></div></div><div class="diagram-reference"><span class="diagram-eyebrow">SECONDARY / CONTEXT</span><strong>Request details</strong><dl><div><dt>Reference</dt><dd>INC-2048</dd></div><div><dt>Team</dt><dd>IT support</dd></div></dl><div class="original-description">Original description <span aria-hidden="true">⌄</span></div></div></div><figcaption>The conversation and reply action stay in focus, while the original context remains available alongside them.</figcaption></figure>
+  </div>
+  <div class="artifact-takeaway"><strong>Connection across surfaces</strong><p>A consistent title and status help users move from the list to the conversation without losing context.</p></div>
+</article>
+<article class="artifact-step">
+  <div class="artifact-step-heading"><span class="artifact-step-index">04 / VALIDATE</span><div><h4>Validate the journey with Useberry</h4><p>These original Useberry screens show a task prompt, a click heatmap, and a post-task rating. They provide a reference for structuring validation of the redesigned flow.</p></div></div>
+  <div class="artifact-useberry-grid">
+    <figure class="artifact-useberry"><div class="artifact-reference-label">Task prompt</div><div class="artifact-useberry-frame artifact-useberry-frame--task"><img src="assets/images/group206195-1256x1989.jpg" width="1256" height="1989" alt="Useberry task prompt asking the participant to locate the original request description" loading="lazy" decoding="async"></div><figcaption>A concrete task sets the context without prescribing every interaction.</figcaption></figure>
+    <figure class="artifact-useberry"><div class="artifact-reference-label">Click heatmap</div><div class="artifact-useberry-frame artifact-useberry-frame--heatmap"><img src="assets/images/group206195-1256x1989.jpg" width="1256" height="1989" alt="Useberry click heatmap on the My Requests overview" loading="lazy" decoding="async"></div><figcaption>Click patterns help identify where attention and interaction concentrate.</figcaption></figure>
+    <figure class="artifact-useberry artifact-useberry--wide"><div class="artifact-reference-label">Post-task opinion scale</div><div class="artifact-useberry-frame artifact-useberry-frame--rating"><img src="assets/images/group206195-1256x1989.jpg" width="1256" height="1989" alt="Original Useberry opinion-scale screenshot for the request-sharing task" loading="lazy" decoding="async"></div><figcaption>The opinion scale captures perceived ease for the request-sharing task.</figcaption></figure>
+  </div>
+  <div class="artifact-takeaway"><strong>Validation focus</strong><p>Separate observed task behavior from reported experience, then use both to prioritize the next iteration.</p></div>
+</article>
   </div>
 </section>
   </section>
