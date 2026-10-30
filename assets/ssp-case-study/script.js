@@ -1,6 +1,20 @@
 /* Local concept interactions. No network requests or persistent data storage. */
 (() => {
   'use strict';
+  const menuToggle = document.querySelector('#menu-toggle');
+  const portfolioNav = document.querySelector('#portfolio-navigation');
+  let menuOpen = false;
+  function setMenu(open) {
+    menuOpen = open;
+    portfolioNav.classList.toggle('is-open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  }
+  menuToggle.addEventListener('click', () => setMenu(!menuOpen));
+  portfolioNav.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menuOpen) { setMenu(false); menuToggle.focus(); }
+  });
+  portfolioNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
   const list = document.querySelector('#request-list');
   const rows = [...list.querySelectorAll('.request-row')];
   const filters = [...document.querySelectorAll('[data-filter]')];

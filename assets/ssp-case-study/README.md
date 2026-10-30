@@ -2,6 +2,10 @@
 
 `ssp.html` replaces the previous SSP page with a self-initiated concept case study. Its CSS and JavaScript are isolated in this directory; other portfolio pages and the generated global theme are unchanged.
 
+## Visual alignment with the homepage
+
+The page mirrors the existing homepage's Libre Franklin headings, Source Sans 3 body text, charcoal (`#232323`) sections, light-blue (`#9fdbf8`) headings, blue (`#47b5ed`) buttons, white content areas, four-pixel corners, existing logo, and navigation labels. The font import matches the homepage's generated stylesheet. The page does not import the full generated theme, so unrelated Mobirise component rules cannot affect the prototype. Navigation collapses into a toggle menu on small screens.
+
 ## Editing
 
 - Copy and page structure: `ssp.html`.
@@ -23,7 +27,7 @@ The portal preview supports filtering, searching, viewing request details, addin
 
 - JavaScript syntax checked with `node --check`.
 - HTML checked for unique IDs, valid local chapter targets, a single H1, and existing asset paths.
-- Behavior checked against the actual HTML in a minimal DOM harness: search, filters, empty state, dialog data, safe text rendering, per-request drafts, reply state changes, cancellation, closure, counts, and session history.
+- Behavior checked against the actual HTML in a minimal DOM harness: mobile navigation toggle, Escape handling, close on navigation, search, filters, empty state, dialog data, safe text rendering, per-request drafts, reply state changes, cancellation, closure, counts, and session history.
 - Real browser layout, keyboard behavior, and assistive technology checks remain required. Chromium was unavailable in the execution environment and its download was blocked; these checks have not been claimed as passed.
 
 Before merging, open `ssp.html` through a local HTTP server and review desktop and mobile widths, keyboard navigation, dialog focus and Escape behavior, the archive images, and print output. Review the concept framing and proposed evaluation targets with the project owner.

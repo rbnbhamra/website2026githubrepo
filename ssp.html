@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="A self-initiated UX concept by Sukhdeep Singh: redesigning an enterprise self-service portal around the moments after a request is submitted.">
-  <meta name="theme-color" content="#f6f5f0">
+  <meta name="theme-color" content="#232323">
   <title>SSP — Clarity after Submit · Sukhdeep Singh</title>
   <link rel="stylesheet" href="assets/ssp-case-study/style.css">
   <script src="assets/ssp-case-study/script.js" defer></script>
@@ -12,18 +12,21 @@
 <body>
 <a class="skip" href="#main">Skip to case study</a>
 <header class="site-header">
-  <a class="wordmark" href="index.html" aria-label="Sukhdeep Singh, home">s.singh<span class="wordmark-dot">✳</span></a>
-  <nav aria-label="Main navigation"><a href="index.html#features3-0">Selected work</a><a href="aboutme.html">About</a><a class="resume" href="https://drive.google.com/file/d/1x2Gqj4dGR-RCjjrKqWwIxy7dFool08Q6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Résumé <span aria-hidden="true">↗</span></a></nav>
+  <div class="header-inner wrap">
+    <a class="portfolio-logo" href="index.html" aria-label="Sukhdeep Singh, home"><img src="assets/images/screenshot202026-02-0720at209.54.27e280afam-96x96.png" width="48" height="48" alt=""></a>
+    <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-controls="portfolio-navigation" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav id="portfolio-navigation" aria-label="Main navigation"><a href="index.html#features3-0">My Works</a><a href="aboutme.html">About Me</a><a class="resume" href="https://drive.google.com/file/d/1x2Gqj4dGR-RCjjrKqWwIxy7dFool08Q6/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a></nav>
+  </div>
 </header>
 <main id="main">
-  <section class="hero wrap" aria-labelledby="project-title">
+  <section class="hero" aria-labelledby="project-title"><div class="wrap">
     <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Enterprise UX / Self-service portal <span class="concept-tag">Concept project</span></div>
     <div class="hero-heading">
       <h1 id="project-title">You hit Submit.<br>Now <em>what?</em></h1>
       <div class="hero-intro"><p class="lead">Giving employees a clearer path from service request to resolution.</p><p>A redesign of <strong>My Requests</strong> and the <strong>Incident Card</strong>, built around three questions: Where is my request? What’s happening? What can I do next?</p><a class="text-link" href="#decisions">Explore the design <span aria-hidden="true">↓</span></a></div>
     </div>
     <dl class="project-meta"><div><dt>Designer</dt><dd>Sukhdeep Singh · UX &amp; UI</dd></div><div><dt>Scope</dt><dd>Request overview + incident detail</dd></div><div><dt>Timebox</dt><dd>6-week concept sprint</dd></div><div><dt>Focus</dt><dd>Clarity, continuity, configuration</dd></div></dl>
-  </section>
+  </div></section>
 
   <figure class="hero-stage wrap-wide">
     <div class="stage-top"><span><span class="live-dot" aria-hidden="true"></span> THE EXPERIENCE, REIMAGINED</span><span>01 / REQUEST OVERVIEW</span></div>
@@ -83,7 +86,7 @@
   <section class="section wrap" aria-labelledby="delivery-title"><div class="section-heading"><p class="eyebrow">DESIGNING BEYOND THE HAPPY PATH</p><h2 id="delivery-title">The details that make<br>the concept hold up.</h2></div><div class="delivery-grid"><article><span aria-hidden="true">↔</span><h3>Responsive behavior</h3><p>Stack reference details after the conversation on small screens. Keep request titles readable and actions reachable without horizontal scrolling.</p></article><article><span aria-hidden="true">Aa</span><h3>Accessible communication</h3><p>Pair color with written status, preserve keyboard focus, label controls, and announce feedback. Audit the production experience with assistive technology.</p></article><article><span aria-hidden="true">⌘</span><h3>Configuration coverage</h3><p>Review hidden fields, unavailable actions, customer-defined statuses, longer labels, translations, and permissions before implementation.</p></article><article><span aria-hidden="true">∅</span><h3>States and recovery</h3><p>Specify empty lists, no search results, failed replies, expired access, and closure errors. Preserve a draft when an action fails.</p></article></div><div class="impact-note"><strong>How impact would be measured after release</strong><p>Track successful follow-up tasks, repeat visits caused by unresolved confusion, and request-related support contacts. Compare equivalent cohorts and account for broader product changes before attributing any improvement to this redesign.</p></div></section>
 
   <section class="reflection-section" id="reflection" aria-labelledby="reflection-title"><div class="wrap reflection-layout"><div><p class="eyebrow">05 / REFLECTION</p><h2 id="reflection-title">Good self-service<br>leaves less<br><em>to interpret.</em></h2></div><div><p class="large-copy">The strongest direction in this concept is the connection between status, context, and action.</p><p>Making a request easier to scan is useful only if the detail page continues that clarity. The overview sets expectations; the conversation explains what changed; the closing flow confirms what happens next.</p><p>The hardest unresolved question is how far a shared interface can simplify customer-defined workflows. I would validate the design across contrasting configurations before committing to one universal layout.</p><a class="text-link" href="#project-title">Back to the beginning <span aria-hidden="true">↑</span></a></div></div></section>
-  <footer class="site-footer wrap"><a class="wordmark" href="index.html">s.singh<span class="wordmark-dot">✳</span></a><p>SSP / A self-initiated UX concept</p><a href="index.html#features3-0">More selected work <span aria-hidden="true">↗</span></a></footer>
+  <footer class="site-footer"><div class="wrap"><p>© Copyright 2026 — All Rights Reserved</p><a href="index.html#features3-0">Back to My Works <span aria-hidden="true">↗</span></a></div></footer>
 </main>
 
 <dialog id="request-dialog" aria-labelledby="dialog-title">
