@@ -14,6 +14,8 @@ The page mirrors the existing homepage's Libre Franklin headings, Source Sans 3 
 - The Discovery gallery reuses the original research planning, synthesis, and competitor analysis images under `assets/images/`.
 - The always-visible starting-artifacts section reuses two existing images and includes the uploaded Crazy 8 screenshot at `assets/ssp-case-study/crazy8-closing.png`. All screenshot references are local website assets; there are no full-size image interactions.
 
+The artifact section is organized into three stages: framing the friction, exploring closing-flow alternatives, and refining the interface hierarchy. Each stage includes a short explanation and a design takeaway. The overview and incident detail are displayed in separate CSS viewports of the same original reference image; no screenshot pixels have been changed. On mobile, the reference views stack vertically.
+
 The current source was prepared from the user's final edited HTML download. Its text, footer, images, static gallery behavior, and homepage-matching back-to-top control are preserved. Styles and scripts were extracted into the page's existing asset files for website deployment. The downloadable single-file version retains embedded images; the repository version uses identical local image bytes.
 
 ### Visual editing mode
