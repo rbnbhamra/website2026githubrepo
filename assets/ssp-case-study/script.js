@@ -16,6 +16,20 @@
     if (event.key === 'Escape' && menuOpen) { setMenu(false); menuToggle.focus(); }
   });
   portfolioNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+
+  const dateFormat = new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  function setUpdatedAt(timestamp, date, relative) {
+    timestamp.setAttribute('datetime', date.toISOString());
+    timestamp.querySelector('.request-relative').textContent = relative;
+    timestamp.querySelector('.request-date').textContent = dateFormat.format(date);
+  }
+  // Sample requests are relative to the current demo session, including calendar dates.
+  const demoNow = new Date();
+  document.querySelectorAll('.request-updated').forEach(timestamp => {
+    const date = new Date(demoNow.getTime() - Number(timestamp.dataset.minutes) * 60000);
+    setUpdatedAt(timestamp, date, timestamp.querySelector('.request-relative').textContent);
+  });
+
   const list = document.querySelector('#request-list');
   const rows = [...list.querySelectorAll('.request-row')];
   const filters = [...document.querySelectorAll('[data-filter]')];
@@ -141,7 +155,7 @@
       document.querySelector('#dialog-status').className = badge.className;
       document.querySelector('#dialog-status').textContent = badge.textContent;
     }
-    activeRow.querySelector('.request-updated').textContent = 'Just now';
+    setUpdatedAt(activeRow.querySelector('.request-updated'), new Date(), 'Just now');
     feedback.textContent = 'Reply added to this prototype. No message has been sent externally.';
     updateCounts();
     filterRows();
@@ -170,7 +184,7 @@
     badge.className = 'badge closed';
     badge.textContent = 'Closed';
     activeRow.querySelector('.request-status small').textContent = 'Resolved and confirmed';
-    activeRow.querySelector('.request-updated').textContent = 'Just now';
+    setUpdatedAt(activeRow.querySelector('.request-updated'), new Date(), 'Just now');
     document.querySelector('#dialog-status').className = badge.className;
     document.querySelector('#dialog-status').textContent = badge.textContent;
     replyText.value = '';
